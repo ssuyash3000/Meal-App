@@ -77,7 +77,6 @@ var app =(function(){
         }
     }
     function handleClick(e){
-
         if(e.target.id === "mealItem" || e.target.id === "poster" ||e.target.id === "details" 
         || e.target.id ==="area" || e.target.id === "mealCategory" || e.target.id ==="mealTitle"){
             let mealId = e.target.dataset.id;
