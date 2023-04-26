@@ -4,6 +4,7 @@ var app =(function(){
     let errorMessage =  document.getElementById("errorMessage");
     let mealList = [];
     let favList = [];
+    //function to add meal in the DOM
     function addMealToDOM(meal){
         let li = document.createElement("li");
         li.dataset.id = `${meal.idMeal}`;
@@ -27,6 +28,7 @@ var app =(function(){
         `;
         listOfMealInDOM.append(li);
     }
+    //function to search the meal
     async function searchTheMeal(text){
         const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${text}`);
         const data =  await response.json();
@@ -43,16 +45,12 @@ var app =(function(){
             }
         }
     }   
-    function handleKeys(e){
-        const text = inputBar.value;
-        if(text.length !== 0 && e.target.id  === "mealSearchBar"){
-            searchTheMeal(text);
-        }
-    }
+    //function to add meal in fav list
     function addToFav(mealId, mealTitle){
         for(i of favList){
             if(i===mealId){
                 errorMessage.innerHTML = "This meal is already in the Fav List";
+                //clearing out the message in 4 seconds
                 setTimeout(()=>{
                     errorMessage.innerHTML = "";
                 }, 4000);
@@ -62,6 +60,7 @@ var app =(function(){
         }
         favList.push(mealId);
         errorMessage.innerHTML = `${mealTitle} added in the fav List`;
+        //clearing out the message in 4 seconds
         setTimeout(()=>{
             errorMessage.innerHTML = "";
         }, 4000);
@@ -69,6 +68,13 @@ var app =(function(){
         //updating the favList array in the localStorage each time 
         // favList is updated 
         localStorage.setItem("favList", JSON.stringify(favList));
+    }
+    //Event Delegation - handling all similar events under one function 
+    function handleKeys(e){
+        const text = inputBar.value;
+        if(text.length !== 0 && e.target.id  === "mealSearchBar"){
+            searchTheMeal(text);
+        }
     }
     function handleClick(e){
 

@@ -10,11 +10,9 @@ body {
 	background-attachment: fixed;
 	color: antiquewhite;
 	text-align: center;
-	/* overflow-x: hidden; */
 }
 
 #container {
-	/* width: fit-content; */
     text-align: center;
     width: 97%;
     margin: 0 auto;
@@ -55,8 +53,7 @@ header {
     display: inline;
     text-align: left;
     margin-left: 15px;
-    /* margin-left: 30%;
-    margin-right: 30%; */
+
     align-items: center;
     
   }
