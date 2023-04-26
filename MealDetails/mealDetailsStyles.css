@@ -1,0 +1,71 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+    
+}
+
+body {
+	background: radial-gradient(circle closest-corner at center 500px, #0c7e71, rgb(0, 0, 0) 90%)
+	no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	color: antiquewhite;
+    display: flex;
+    align-content: center;
+	/* overflow-x: hidden; */
+}
+
+#container {
+	/* width: fit-content; */
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+	display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+	
+
+    align-items: center;
+}
+#mealName h2{
+    font-size: 50px;
+}
+#photo{
+    margin-top: 10px;
+}
+#photo img{
+    border-radius: 40%;
+    height: 500px;
+    background: radial-gradient(circle closest-corner at center 200px, #0a884b, rgb(1, 2, 24) 70%) no-repeat;	
+}
+#instruction{
+    display: flex;
+    flex-direction: column;
+ justify-content: center;
+ text-align: justify;
+ width: 70%;
+ font-size: x-large;
+ padding: 20px;
+ border-radius: 5%;
+ background: radial-gradient(circle closest-corner at center 200px, #0a884b, rgb(1, 2, 24) 70%) no-repeat;	
+}
+#ingridents {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 30px;
+    height: fit-content;
+    width: 70%;
+    text-align: left;
+    font-size: xx-large;
+    background: radial-gradient(circle closest-corner at center 200px,
+     #167445, rgb(1, 2, 24) 40%) no-repeat;	
+}
+#ingridents ul{
+    list-style-type: none;
+    font-size: xx-large;
+}
+#source a{
+    color:bisque;
+    font-size: x-large;
+}
