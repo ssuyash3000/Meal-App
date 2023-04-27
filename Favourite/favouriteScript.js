@@ -13,7 +13,7 @@ var favApp = (function(){
 
         <h1 id="mealTitle"  data-id="${meal.idMeal}">${meal.strMeal} </h1>
     
-        <h3 id="mealCategory">Category - ${meal.strCategory}</h3>
+        <h3 id="mealCategory"  data-id="${meal.idMeal}">Category - ${meal.strCategory}</h3>
 
         <h3 id="area" data-id="${meal.idMeal}">Area - ${meal.strArea}</h3>
 
